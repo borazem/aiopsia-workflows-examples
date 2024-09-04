@@ -5,9 +5,9 @@
       "Provision": {
         "Type": "Task",
         "Resource": "manageiq://provision_execute",
-        "Next": "getFolderName"
+        "Next": "GetFolderName"
       },
-      "getFolderName":{
+      "GetFolderName":{
         "Type": "Task",
         "Resource": "docker://docker.io/borazem/bofnames1:latest",
         "Parameters": {
