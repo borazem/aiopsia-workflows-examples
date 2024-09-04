@@ -7,10 +7,8 @@
         "Resource": "docker://docker.io/manageiq/workflows-examples-provision-vm-service-list-providers:latest",
         "Next": "Provision",
         "Credentials": {
-          "api_user.$": "$.api_user",
-          "api_password.$": "$.api_password",
-          "api_token.$": "$.api_token",
-          "api_bearer_token.$": "$.api_bearer_token"
+          "wf_username.$": "$.username",
+          "wf_password.$": "$.password"
         },
       "Provision": {
         "Type": "Task",
@@ -47,3 +45,4 @@
       }
     }
   }
+}
