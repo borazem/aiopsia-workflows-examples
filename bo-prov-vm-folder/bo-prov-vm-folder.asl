@@ -19,8 +19,10 @@
         "Type": "Task",
         "Resource": "manageiq://embedded_ansible",
         "Credentials": {
-          "wf_username.$": "$.username",
-          "wf_password.$": "$.password"
+          "api_user.$": "$.api_user",
+          "api_password.$": "$.api_password",
+          "api_token.$": "$.api_token",
+          "api_bearer_token.$": "$.api_bearer_token"
         },
         "Parameters": {
           "RepositoryUrl": "https://github.com/borazem/CloudForms-summit-fy19/tree/master/playbooks/bosamples",
