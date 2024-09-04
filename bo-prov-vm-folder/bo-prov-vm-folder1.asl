@@ -1,19 +1,23 @@
 {
-  "Comment": "Provision then get a folder name from container then run ansible playbook to create folder",
-  "StartAt": "ListProviders",
+  "Comment": "List Templates.",
+  "StartAt": "ListTemplates",
   "States": {
-    "ListProviders": {
+    "ListTemplates": {
       "Type": "Task",
-      "Resource": "docker://docker.io/manageiq/workflows-examples-provision-vm-service-list-providers:latest",
-      "Next": "Finished",
+      "Resource": "docker://docker.io/manageiq/workflows-examples-provision-vm-service-list-templates:latest",
+      "End": true,
       "Credentials": {
         "api_user.$": "$.api_user",
         "api_password.$": "$.api_password",
         "api_token.$": "$.api_token",
         "api_bearer_token.$": "$.api_bearer_token"
       },
-    "Finished": {
-      "Type": "Succeed"
+      "Parameters": {
+        "API_URL.$": "$$.Execution._manageiq_api_url",
+        "VERIFY_SSL.$": "$.dialog.dialog_verify_ssl",
+
+        "PROVIDER_ID.$": "$.dialog.dialog_provider"
+      }
     }
   }
 }
