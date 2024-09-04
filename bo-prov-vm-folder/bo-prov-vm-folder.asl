@@ -11,7 +11,7 @@
         "Type": "Task",
         "Resource": "docker://docker.io/borazem/bofnames1:latest",
         "Parameters": {
-          "DOCER_FOLDER_ALIAS_NAME.$": "$.dialog_name"
+          "FOLDER_ALIAS_NAME.$": "$.dialog_name"
         },
         "Next": "CreateFolder"
       },
