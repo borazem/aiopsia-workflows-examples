@@ -1,7 +1,17 @@
 {
     "Comment": "Provision then get a folder name from container then run ansible playbook to create folder",
-    "StartAt": "Provision",
+    "StartAt": "ListProviders",
     "States": {
+      "ListProviders": {
+        "Type": "Task",
+        "Resource": "docker://docker.io/manageiq/workflows-examples-provision-vm-service-list-providers:latest",
+        "Next": "Provision",
+        "Credentials": {
+          "api_user.$": "$.api_user",
+          "api_password.$": "$.api_password",
+          "api_token.$": "$.api_token",
+          "api_bearer_token.$": "$.api_bearer_token"
+        },
       "Provision": {
         "Type": "Task",
         "Resource": "manageiq://provision_execute",
@@ -18,12 +28,6 @@
       "CreateFolder": {
         "Type": "Task",
         "Resource": "manageiq://embedded_ansible",
-        "Credentials": {
-          "api_user.$": "$.api_user",
-          "api_password.$": "$.api_password",
-          "api_token.$": "$.api_token",
-          "api_bearer_token.$": "$.api_bearer_token"
-        },
         "Parameters": {
           "RepositoryUrl": "https://github.com/borazem/CloudForms-summit-fy19/tree/master/playbooks/bosamples",
           "RepositoryBranch": "master",
