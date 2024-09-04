@@ -37,7 +37,7 @@
           "folder_name": "$.folder_name",
           "ansible_user": "$.wf_username",
           "ansible_become_user": "$.wf_username",
-          "ansible_ssh_password": "$.wf_password",
+          "ansible_ssh_password": "$.wf_password"
         }
       },
       "Next": "Finished"
