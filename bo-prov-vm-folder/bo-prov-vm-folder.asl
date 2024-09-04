@@ -20,7 +20,7 @@
         "Resource": "manageiq://embedded_ansible",
         "Credentials": {
           "wf_username.$": "$.username",
-          "wf_password.$": "$.password",
+          "wf_password.$": "$.password"
         },
         "Parameters": {
           "RepositoryUrl": "https://github.com/borazem/CloudForms-summit-fy19/tree/master/playbooks/bosamples",
