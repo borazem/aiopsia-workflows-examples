@@ -1,0 +1,14 @@
+---
+- name: Create a directory on vm1
+  hosts: vm1
+  vars:
+    ansible_become: yes
+    ansible_become_method: sudo
+  tasks:
+    - name: Ensure the directory exists
+      ansible.builtin.file:
+        path: "{{ folder_name }}"
+        state: directory
+        mode: '0755'
+        owner: root
+        group: root
