@@ -24,9 +24,9 @@
         "wf_password.$": "$.password"
       },
       "Parameters": {
-        "RepositoryUrl": "https://github.com/borazem/CloudForms-summit-fy19/tree/master/playbooks/bosamples",
+        "RepositoryUrl": "https://github.com/borazem/aiopsia-workflows-examples/blob/master/bo-prov-vm-folder/ansible/",
         "RepositoryBranch": "master",
-        "PlaybookName": "createFolder.yml",
+        "PlaybookName": "bo-create-folder1.yml",
         "Hosts.$": "$dialog_hostname",
         "ExtraVars.$": {
           "folder_name": "$.folder_name",
