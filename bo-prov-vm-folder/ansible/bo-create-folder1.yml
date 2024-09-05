@@ -1,6 +1,6 @@
 ---
 - name: Create a directory on vm1
-  hosts: vm1
+  hosts: 192.168.20.225
   vars:
     folder_name: /bo-test
   tasks:
