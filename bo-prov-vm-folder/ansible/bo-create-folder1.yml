@@ -1,0 +1,19 @@
+---
+- name: Create a directory on vm1
+  hosts: vm1
+  vars:
+    folder_name: /bo-test
+  tasks:
+    - name: Ensure the directory exists
+      ansible.builtin.file:
+        path: "/bofolder1"
+        state: directory
+        mode: '0755'
+        owner: root
+        group: root
+  vars:
+    ansible_user: root
+    ansible_ssh_pass: "ICPassw0rd#"
+    ansible_become: yes
+    ansible_become_method: sudo
+    ansible_become_user: root
