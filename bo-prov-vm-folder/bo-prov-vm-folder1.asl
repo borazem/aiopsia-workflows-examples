@@ -24,7 +24,7 @@
         "wf_password.$": "$.password"
       },
       "Parameters": {
-        "RepositoryUrl": "https://github.com/borazem/aiopsia-workflows-examples/blob/master/bo-prov-vm-folder/ansible/",
+        "RepositoryUrl": "https://github.com/borazem/aiopsia-workflows-examples/tree/master/bo-prov-vm-folder/ansible",
         "RepositoryBranch": "master",
         "PlaybookName": "bo-create-folder1.yml",
         "Hosts.$": "$dialog_hostname",
