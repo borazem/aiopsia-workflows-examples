@@ -8,9 +8,11 @@
       "Next": "HelloWorld"
     },
     "HelloWorld": {
+      "InputPath": "$.",
       "Type": "Pass",
       "Result": "Hello World!",
-      "Next": "Finished"
+      "Next": "Finished",
+      "ResultPath": "$."
     },
     "Finished": {
       "Type": "Succeed"
