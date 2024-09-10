@@ -12,7 +12,10 @@
     },
     "GetFolderName":{
       "Type": "Task",
-      "Resource": "docker://docker.io/borazem/bofnames1:latest",
+      "Resource": "docker://docker.io/borazem/bofnames2:latest",
+      "Parameters": {
+        "FOLDER_ALIAS_NAME.$": "$.dialog_name"
+      },
       "Next": "PostProvision1"
     },
     "PostProvision1": {
